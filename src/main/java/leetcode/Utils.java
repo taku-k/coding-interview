@@ -3,6 +3,8 @@ package leetcode;
 import java.util.*;
 import java.io.*;
 import java.lang.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by taku on 2016/05/25.
@@ -26,5 +28,14 @@ public class Utils {
             head = head.next;
         }
         return String.join(",", (String [])l.toArray(new String[l.size()]));
+    }
+
+    static TreeNode toTreeNode(String data) {
+        return new SerializeAndDeserializeBinaryTree().deserialize(data);
+    }
+
+    static TreeNode toTreeNode(Integer ...data) {
+        String s = Stream.of(data).map(i -> String.format("%d", i)).collect(Collectors.joining(","));
+        return new SerializeAndDeserializeBinaryTree().deserialize(s);
     }
 }
