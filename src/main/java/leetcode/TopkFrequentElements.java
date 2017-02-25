@@ -39,7 +39,7 @@ public class TopkFrequentElements {
 
     }
 
-    public List<Integer> topKFrequent(int[] nums, int k) {
+    public List<Integer> topKFrequent(List<Integer> nums, int k) {
         SortedSet<Elements> tree = new TreeSet<>();
         Map<Integer, Elements> map = new HashMap<>();
 

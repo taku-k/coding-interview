@@ -41,7 +41,7 @@ public class TestCh2 {
     }
     @Test
     public void testDijkstra() {
-        List<List<Integer>> g = Arrays.asList(new List[]{Arrays.asList(new Integer[]{1,2}), Arrays.asList(new Integer[]{3,4})});
+        List<List<Integer>> g = Arrays.asList(Arrays.asList(1,2), Arrays.asList(3,4));
 
     }
 }
