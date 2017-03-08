@@ -12,3 +12,4 @@ Repo to keep all of my codes for competitive programming competitions and prepar
 * [Cracking The Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X)
 * [LeetCode OJ](https://leetcode.com/)
 * [GeeksforGeeks](http://www.geeksforgeeks.org/)
+* [Elements of Programming Interviews](http://elementsofprogramminginterviews.com/)
