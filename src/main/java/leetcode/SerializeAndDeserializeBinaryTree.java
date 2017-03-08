@@ -73,4 +73,26 @@ public class SerializeAndDeserializeBinaryTree {
         n.right = construct(serialized, idx);
         return n;
     }
+
+    public TreeNode deserialize2(String data) {
+        String[] split = data.split(",");
+        if (split.length == 0 || split[0] == "null") {
+            return null;
+        }
+        return recConstruct(0, split);
+    }
+
+    private TreeNode recConstruct(int idx, String[] data) {
+        int len = data.length;
+        if (idx >= len) {
+            return null;
+        }
+        if (data[idx].equals("null")) {
+            return null;
+        }
+        TreeNode ret = new TreeNode(Integer.parseInt(data[idx]));
+        ret.left = recConstruct(2*idx + 1, data);
+        ret.right = recConstruct(2*idx + 2, data);
+        return ret;
+    }
 }

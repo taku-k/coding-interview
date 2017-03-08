@@ -32,7 +32,7 @@ public class Utils {
     }
 
     static TreeNode toTreeNode(String data) {
-        return new SerializeAndDeserializeBinaryTree().deserialize(data);
+        return new SerializeAndDeserializeBinaryTree().deserialize2(data);
     }
 
     static TreeNode toTreeNode(Integer ...data) {
