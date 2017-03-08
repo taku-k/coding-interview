@@ -11,6 +11,7 @@ import java.util.stream.Stream;
  */
 public class Utils {
     static ListNode lns(String s) {
+        if (s == "") return null;
         String[] splited = s.split(",");
         ListNode head = new ListNode(Integer.parseInt(splited[0]));
         ListNode tmp = head;

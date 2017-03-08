@@ -23,7 +23,7 @@ public class PalindromeLinkedList {
         }
         slow = reverse(slow);
         ListNode iter = slow;
-        while (head != slow) {
+        while (head != null && iter != null) {
             if (head.val != iter.val) {
                 return false;
             }
