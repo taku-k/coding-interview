@@ -12,10 +12,8 @@ public class ConstructBinaryTreeFromInpostorders {
         return rec(nodeToInorderIdx, postorder, 0, postorder.length,
                 0, inorder.length);
     }
-
     private TreeNode rec(Map<Integer, Integer> nodeToInorderIdx, int[] postorder,
                          int postorderStart, int postorderEnd, int inorderStart, int inorderEnd) {
-        System.out.printf("%d, %d, %d, %d\n", postorderStart, postorderEnd, inorderStart, inorderEnd);
         if (postorderEnd <= postorderStart || inorderEnd <= inorderStart) {
             return null;
         }
