@@ -4,19 +4,19 @@ import java.util.*;
 
 public class CourseScheduleOrder {
     class TopologicalSort {
-        List<Integer>[] g;
+        List<List<Integer>> g;
         int V;
 
         TopologicalSort(int v) {
             V = v;
-            g = new ArrayList[v];
+            g = new ArrayList<>();
             for (int i = 0; i < v; ++i) {
-                g[i] = new ArrayList<>();
+                g.add(new ArrayList<>());
             }
         }
 
         void addEdge(int from, int to) {
-            g[from].add(to);
+            g.get(from).add(to);
         }
 
         int[] topologicalSort() {
@@ -24,7 +24,7 @@ public class CourseScheduleOrder {
             int[] sorted = new int[V];
             int[] inCounts = new int[V];
             for (int from = 0; from < V; ++from) {
-                for (int to : g[from]) {
+                for (int to : g.get(from)) {
                     inCounts[to]++;
                 }
             }
@@ -37,8 +37,8 @@ public class CourseScheduleOrder {
             while (!que.isEmpty()) {
                 int cur = que.poll();
                 sorted[visited++] = cur;
-                for (int i = 0; i < g[cur].size(); ++i) {
-                    int next = g[cur].get(i);
+                for (int i = 0; i < g.get(cur).size(); ++i) {
+                    int next = g.get(cur).get(i);
                     inCounts[next]--;
                     if (inCounts[next] == 0) {
                         que.offer(next);
