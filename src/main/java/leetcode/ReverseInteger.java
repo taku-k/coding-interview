@@ -5,21 +5,13 @@ package leetcode;
  */
 public class ReverseInteger {
     public int reverse(int x) {
-        StringBuilder sb = new StringBuilder();
-        if (x < 0) {
-            sb.append("-");
-            x *= -1;
+        int res = 0;
+        int remaining = Math.abs(x);
+        while (remaining != 0) {
+            int cur = res * 10 + remaining % 10;
+            if ((cur - remaining % 10) / 10 != res) return 0;
+            remaining /= 10;
         }
-        String xs = Integer.toString(x);
-        for (int i = xs.length()-1; i >= 0; i--) {
-            sb.append(xs.charAt(i));
-        }
-        int ret = 0;
-        try {
-            ret = Integer.valueOf(sb.toString());
-        } catch (Exception e) {
-            ret = 0;
-        }
-        return ret;
+        return x > 0 ? res : -res;
     }
 }
