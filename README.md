@@ -1,6 +1,6 @@
 # coding-interview
 
-[![CircleCI](https://circleci.com/gh/taku-k/coding-interview.svg?style=svg)](https://circleci.com/gh/taku-k/coding-interview)
+[![Build Status](https://travis-ci.org/taku-k/coding-interview.svg?branch=master)](https://travis-ci.org/taku-k/coding-interview)
 
 Repo to keep all of my codes for competitive programming competitions and preparing coding interviews
 
