@@ -1,15 +1,11 @@
 package leetcode;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Arrays;
 
 public class DistributeCandies {
   public int distributeCandies(int[] candies) {
     int result = candies.length / 2;
-    Set<Integer> distinctCandies = new HashSet<>();
-    for (int c : candies) {
-      distinctCandies.add(c);
-    }
-    return Math.min(result, distinctCandies.size());
+    int cnt = (int) Arrays.stream(candies).distinct().count();
+    return Math.min(result, cnt);
   }
 }
