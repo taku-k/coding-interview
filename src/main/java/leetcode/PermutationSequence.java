@@ -1,8 +1,8 @@
 package leetcode;
 
 public class PermutationSequence {
-    public String getPermutation(int n, int k) {
+  public String getPermutation(int n, int k) {
 
-        return "";
-    }
+    return "";
+  }
 }

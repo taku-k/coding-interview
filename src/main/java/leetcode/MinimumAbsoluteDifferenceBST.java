@@ -1,7 +1,7 @@
 package leetcode;
 
 public class MinimumAbsoluteDifferenceBST {
-    public int getMinimumDifference(TreeNode root) {
-        return 0;
-    }
+  public int getMinimumDifference(TreeNode root) {
+    return 0;
+  }
 }
