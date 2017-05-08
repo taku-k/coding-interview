@@ -1,5 +1,7 @@
 plugins {
     id 'com.github.sherter.google-java-format' version '0.6'
+    id 'net.saliman.cobertura' version '2.3.1'
+    id 'com.github.kt3k.coveralls' version '2.8.1'
 }
 
 apply plugin: 'java'
@@ -20,6 +22,8 @@ dependencies {
 test {
     testLogging.showStandardStreams = true
 }
+
+cobertura.coverageFormats = ['html', 'xml'] // coveralls plugin depends on xml format report
 
 //task execute(type:JavaExec) {
 //    main = mainClass
