@@ -8,23 +8,25 @@ public class ValidSquare {
   private class Vector {
     int x;
     int y;
+
     Vector(Coord p1, Coord p2) {
       x = p1.x - p2.x;
       y = p1.y - p2.y;
     }
 
     boolean isOrthogonal(Vector other) {
-      return (this.x*other.x + this.y*other.y) == 0;
+      return (this.x * other.x + this.y * other.y) == 0;
     }
 
     double len() {
-      return Math.sqrt(x*x + y*y);
+      return Math.sqrt(x * x + y * y);
     }
   }
 
   class Coord {
     int x;
     int y;
+
     Coord(int[] p) {
       this.x = p[0];
       this.y = p[1];
@@ -61,11 +63,17 @@ public class ValidSquare {
       Vector p23 = new Vector(cd.get(1), cd.get(2));
       Vector p34 = new Vector(cd.get(2), cd.get(3));
       Vector p41 = new Vector(cd.get(3), cd.get(0));
-      if (p12.isOrthogonal(p41) && p12.isOrthogonal(p23) && p23.isOrthogonal(p34) &&
-          p34.isOrthogonal(p41) && Double.compare(p12.len(), p34.len()) == 0 &&
-          Double.compare(p41.len(), p23.len()) == 0 && Double.compare(p12.len(), p41.len()) == 0 &&
-          Double.compare(p12.len(), 0.0) != 0 && Double.compare(p23.len(), 0.0) != 0 &&
-          Double.compare(p34.len(), 0.0) != 0 && Double.compare(p41.len(), 0.0) != 0) return true;
+      if (p12.isOrthogonal(p41)
+          && p12.isOrthogonal(p23)
+          && p23.isOrthogonal(p34)
+          && p34.isOrthogonal(p41)
+          && Double.compare(p12.len(), p34.len()) == 0
+          && Double.compare(p41.len(), p23.len()) == 0
+          && Double.compare(p12.len(), p41.len()) == 0
+          && Double.compare(p12.len(), 0.0) != 0
+          && Double.compare(p23.len(), 0.0) != 0
+          && Double.compare(p34.len(), 0.0) != 0
+          && Double.compare(p41.len(), 0.0) != 0) return true;
     }
     return false;
   }
