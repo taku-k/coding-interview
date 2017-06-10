@@ -7,6 +7,7 @@ public class NumberConnectedComponentsUndirectedGraph {
   private class Node {
     int n;
     List<Integer> nodes;
+
     Node(int n) {
       this.n = n;
       this.nodes = new ArrayList<>();

@@ -24,7 +24,7 @@ public class ReconstructBinaryTreePreInordersTest {
   private static void checkAns(BSTNode<Integer> n, Integer pre) {
     if (n != null) {
       checkAns(n.left, pre);
-      assert(Integer.compare(pre, n.data) <= 0);
+      assert (Integer.compare(pre, n.data) <= 0);
       checkAns(n.right, n.data);
     }
   }
